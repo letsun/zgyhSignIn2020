@@ -1,0 +1,312 @@
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  color: #333;
+  font: normal normal normal 14px/20px 'Microsoft YaHei', Arial, sans-serif;
+}
+img {
+  border: 0;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+button {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+table {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td {
+  padding: 0;
+}
+textarea {
+  resize: none;
+}
+body {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.clearFix:before,
+.clearFix:after {
+  content: " ";
+  display: table;
+}
+.clearFix:after {
+  clear: both;
+}
+.pullLeft {
+  float: left;
+}
+.pullRight {
+  float: right;
+}
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.ellipsisNormal {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+/*选择场次*/
+#selectSign {
+  background: url("../images/3_4.png") #fff top center no-repeat;
+  background-size: 100% 100%;
+}
+#selectSign .session {
+  width: 80%;
+  margin: 0 auto;
+}
+#selectSign .session h3 {
+  line-height: 80px;
+  text-align: center;
+  height: 80px;
+  font-size: 14px;
+}
+#selectSign .session .formRow {
+  padding-left: 60px;
+  position: relative;
+}
+#selectSign .session .formRow label {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #0976ff;
+  font-size: 14px;
+  font-weight: normal;
+  color: #fff;
+  left: 0;
+}
+#selectSign .session .formRow #session {
+  height: 30px;
+  border: 1px solid #0976ff;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+#selectSign .session #selectRound {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  text-align: center;
+  background-color: #0976ff;
+  margin-top: 20px;
+  color: #fff;
+  width: 100%;
+}
+/*活动未开启*/
+#closed {
+  background-color: #fff;
+  padding-top: 80px;
+}
+#closed .tipImg {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+}
+#closed p {
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+}
+/*签到首页*/
+#signCon .btn {
+  position: absolute;
+  width: 80%;
+  top: 39%;
+  left: 10%;
+}
+#signCon .btn:before,
+#signCon .btn:after {
+  content: " ";
+  display: table;
+}
+#signCon .btn:after {
+  clear: both;
+}
+#signCon .btn li {
+  width: 33.3%;
+  float: left;
+}
+#signCon .btn li img {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+#signCon .btn li p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+}
+/*发言*/
+#speak .signIn {
+  position: absolute;
+  width: 80%;
+  top: 32%;
+  left: 10%;
+}
+#speak .signIn .userImg {
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+}
+#speak .signIn .userName {
+  padding: 10px 0 10px 0;
+  color: #34afb6;
+  text-align: center;
+}
+#speak .signIn #comment {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #34AFB6;
+  color: #111B8B;
+  height: 85px;
+  width: 100%;
+  background: none;
+  border-radius: 10px;
+}
+#speak .signIn #comment::-webkit-input-placeholder {
+  color: #34AFB6;
+}
+#speak .signIn #submitSpeak {
+  display: block;
+  border: none;
+  color: #fff;
+  background-color: #34AFB6;
+  margin: 10px auto;
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  font: inherit;
+  outline: none;
+}
+/*投票*/
+#vote {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+}
+#vote .question {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-bottom: 50px;
+}
+#vote .question .questionTitle {
+  height: 49px;
+  line-height: 49px;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+#vote .question .formRow {
+  padding: 20px 30px 20px 15px;
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #fff;
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+}
+#vote .question .formRow .select {
+  line-height: 24px;
+  display: block;
+  padding-right: 20px;
+}
+#vote .question .formRow input[type="radio"] {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  right: 15px;
+  background-color: #fff;
+  outline: none;
+  top: 50%;
+  margin: -15px 0 0 0;
+}
+#vote .question .formRow input[type="radio"]:checked {
+  background-color: #59dde2;
+}
+#vote .question #submitVote {
+  font: inherit;
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 30px auto 0 auto;
+  padding: 0;
+  border: none;
+  background-color: #5AD4E7;
+  line-height: 40px;
+  border-radius: 20px;
+}

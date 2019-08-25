@@ -1,0 +1,165 @@
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  color: #333;
+  font: normal normal normal 14px/20px 'Microsoft YaHei', Arial, sans-serif;
+}
+img {
+  border: 0;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+button {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+table {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td {
+  padding: 0;
+}
+textarea {
+  resize: none;
+}
+body {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.clearFix:before,
+.clearFix:after {
+  content: " ";
+  display: table;
+}
+.clearFix:after {
+  clear: both;
+}
+.pullLeft {
+  float: left;
+}
+.pullRight {
+  float: right;
+}
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.ellipsisNormal {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bg {
+  width: 100%;
+  display: block;
+}
+.mask {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.question {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.question .questionTitle {
+  height: 49px;
+  line-height: 49px;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.question .formRow {
+  padding: 20px 30px 20px 15px;
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #fff;
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+}
+.question .formRow .select {
+  line-height: 24px;
+  display: block;
+  padding-right: 20px;
+}
+.question .formRow input[type="radio"] {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  right: 15px;
+  background-color: #fff;
+  outline: none;
+  top: 50%;
+  margin: -15px 0 0 0;
+}
+.question .formRow input[type="radio"]:checked {
+  background-color: #59dde2;
+}
+.question #submit {
+  font: inherit;
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 30px auto 0 auto;
+  padding: 0;
+  border: none;
+  background-color: #5AD4E7;
+  line-height: 40px;
+  border-radius: 20px;
+}

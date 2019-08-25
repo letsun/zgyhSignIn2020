@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>深圳市立信创源科技有限公司2019年会盛宴</title>
+
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/swiper.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/pc.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="container">
+    <img class="logo" src="../images/2_6.png">
+    <img class="code" src="../images/1_8.png">
+
+    <div id="content">
+        <div class="header">
+            <!--<img class="code" src="../images/1_8.png">-->
+            <!--<img class="logo" src="../images/2_6.png">-->
+            <!--<div id="signNum"><span>0</span>人签到</div>-->
+        </div>
+
+        <!--签到形式1，文字上墙-->
+        <!--<div id="sign" class="signType1">-->
+            <!--<img class="signBg" src="../images/1_9.png">-->
+
+            <!--<img style="top: 55px;left:325px;" class="photoShow" src="../images/1_6.png">-->
+            <!--<div class="name">昵称</div>-->
+        <!--</div>-->
+
+        <!--签到形式2，列表-->
+        <div id="sign" class="signType2">
+            <ul id="userList"></ul>
+        </div>
+
+        <!--投票-->
+        <div id="vote" style="display: none">
+            <div class="voteCon">
+                <div id="voteTitle" class="title">期待哪些职位适合你？</div>
+
+                <div id="voteSelect" class="select">
+                    <div class="select-box">
+                        <div class="selectNum">
+                            <div id="A" class="length"><span>0</span></div>
+                        </div>
+
+                        <div class="selectName">A.程序员</div>
+                    </div>
+                </div>
+            </div>
+
+            <a id="voteBtn" href="javascript:void(0)">开启投票</a>
+        </div>
+
+        <!--评论-->
+        <div id="comment" style="display: none">
+            <div class="swiper-container" id="commentCon">
+                <div class="swiper-wrapper">
+                </div>
+            </div>
+            <!--<div class="li">
+                <img class="userImg" src="../../images/1_6.png">
+                <div class="userName">呵呵呵呵呵呵呵呵</div>
+                <p>内容内容内容内容内容内容内容内容内容内容内容</p>
+                <div class="showMore"><div>
+            </div>-->
+        </div>
+
+        <!--评论按钮-->
+        <ul class="commentBtn" style="display: none">
+            <li id="prev"><img src="../images/3_1.png"></li>
+            <li id="stop"></li>
+            <li id="next"><img src="../images/3_2.png"></li>
+        </ul>
+
+        <!--抽奖-->
+        <div id="lottery" style="display: none">
+            <div class="lotteryCon">
+                <div class="title">滚动抽奖</div>
+                <div class="lotteryArea">
+                    <div class="mask1"></div>
+                    <div class="mask2"></div>
+                    <div class="mask3"></div>
+
+                    <div id="lotteryUser">
+                        <!--<div class="lotUser photoMove">
+                            <img src="../../images/1_6.png">
+                            <p>小黄人</p>
+                        </div>-->
+                    </div>
+                </div>
+
+                <div class="prizeWinner1">
+                    <div class="winnerTitle">
+                        <span class="pullLeft">获奖名单</span>
+                        <span class="pullRight">获奖人数：<span id="winnerNum">0</span></span>
+                    </div>
+                </div>
+
+                <!--抽奖 无奖项-->
+                <div id="lottery1" style="display: none">
+                    <button id="lotteryStart1">开始抽奖</button>
+
+                    <!--获奖用户列表-->
+                    <div id="prizeWinner1">
+                        <!--<div class="userList">
+                            <span class="userListNum">1</span>
+                            <img class="userListImg" src="../../images/1_6.png">
+                            <p class="userListName">小黄人</p>
+                        </div>-->
+                    </div>
+
+                    <button id="lotteryAgain1" disabled="disabled">重新抽奖</button>
+                </div>
+
+                <!--抽奖 有奖项-->
+                <div id="lottery2" style="display: none">
+                    <div class="level">
+                        <label for="level">奖项</label> &nbsp;
+                        <select id="level">
+                            <option value="level1" data-name="一等奖">一等奖</option>
+                            <option value="level2" data-name="二等奖">二等奖</option>
+                        </select>
+                    </div>
+                    <button id="lotteryStart2">开始抽奖</button>
+
+                    <!--获奖用户列表-->
+                    <div id="prizeWinner2">
+                        <!--<div class="userList">
+                            <span class="userListNum">1</span>
+                            <img class="userListImg" src="../../images/1_6.png">
+                            <p class="userListName">小黄人</p>
+                        </div>-->
+                    </div>
+
+                    <button id="lotteryAgain2" disabled="disabled">重新抽奖</button>
+                </div>
+            </div>
+        </div>
+
+        <!--底部按钮-->
+        <ul class="nav">
+            <li id="nav1"><img src="../images/2_1.png"><span>签到</span></li>
+            <!--<li id="nav2"><img src="../images/2_2.png"><span>投票</span></li>-->
+            <li id="nav3"><img src="../images/2_3.png"><span>抽奖</span></li>
+            <!--<li id="nav4"><img src="../images/3_3.png"><span>评论</span></li>-->
+        </ul>
+
+        <!--中奖弹框-->
+        <div id="showWinner">
+            <div class="con animated">
+                <img src="" class="winnerUser">
+                <img class="winnerMask" src="../images/3_5.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="hidden" style="display: none"></div>
+
+<script src="../scripts/jquery-2.2.2.min.js"></script>
+<script src="../scripts/swiper.jquery.min.js"></script>
+<script src="../scripts/common.js"></script>
+
+<script src="../scripts/pc/main.js"></script>
+<script src="../scripts/pc/sign.js"></script>
+<script src="../scripts/pc/vote.js"></script>
+<script src="../scripts/pc/lottery.js"></script>
+<script src="../scripts/pc/comment.js"></script>
+<script>
+    main.init();
+</script>
+</body>
+</html>

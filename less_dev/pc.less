@@ -1,0 +1,746 @@
+@import "common";
+
+html {
+    overflow: hidden;
+}
+
+#container {
+    position: absolute;
+    width: 1600px;
+    height: 900px;
+    top: 50%;
+    left: 50%;
+    margin-top: -450px;
+    margin-left: -800px;
+    background: url("../images/1_20.jpg") center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+
+    width: 265px;
+    height: 73px;
+    display: block;
+}
+
+.code {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 50px;
+    right: 50px;
+}
+
+#content {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -400px;
+
+    .header {
+        position: absolute;
+        height: 70px;
+        padding-top: 10px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        .code {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 10px;
+            left: 35px;
+        }
+
+        .logo {
+            height: 70px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #signNum {
+            height: 70px;
+            line-height: 70px;
+            color: #fff;
+            font-size: 20px;
+            position: absolute;
+            top: 10px;
+            right: 35px;
+        }
+    }
+
+    .nav {
+        position: absolute;
+        left: -95px;
+        bottom: -35px;
+        z-index: 10;
+        li {
+            float: left;
+            margin-right: 10px;
+            cursor: pointer;
+            position: relative;
+            img {
+                display: block;
+            }
+            span {
+                position: absolute;
+                width: 38px;
+                height: 24px;
+                background-color: #fff;
+                bottom: -30px;
+                left: 0;
+                display: none;
+                text-align: center;
+                line-height: 24px;
+            }
+            &:hover span {
+                display: block;
+            }
+        }
+    }
+}
+
+.signType1 {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    top: 0;
+    left: 0;
+
+    .signBg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .photoShow {
+        width: 25px;
+        height: 25px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 110px;
+        left: 200px;
+        z-index: 9;
+        -webkit-transition: ease-out 0.3s;
+        -moz-transition: ease-out 0.3s;
+        -ms-transition: ease-out 0.3s;
+        -o-transition: ease-out 0.3s;
+        transition: ease-out 0.3s;
+    }
+
+    .name {
+        width: 170px;
+        background-color: #fff;
+        border-radius: 5px;
+        font-size: 10px;
+        padding: 5px 15px;
+        line-height: 15px;
+        position: absolute;
+        top: 108px;
+        left: 230px;
+        word-break: break-all;
+        word-wrap: break-word;
+        z-index: 9;
+    }
+}
+
+.signType2 {
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 50px;
+    left: 0;
+    .signBg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+    }
+    .photoShow {
+        width: 60px;
+        height: 60px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 105px;
+        left: 200px;
+        z-index: 9;
+        -webkit-transition: ease-out 0.3s;
+        -moz-transition: ease-out 0.3s;
+        -ms-transition: ease-out 0.3s;
+        -o-transition: ease-out 0.3s;
+        transition: ease-out 0.3s;
+    }
+    .name {
+        width: 300px;
+        background-color: #fff;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 10px 15px;
+        line-height: 30px;
+        position: absolute;
+        top: 110px;
+        left: 280px;
+        word-break: break-all;
+        word-wrap: break-word;
+        z-index: 9;
+    }
+    ul {
+        margin: 34px 0 0 50px;
+        height: 376px;
+        overflow-y: scroll;
+        .clearFix();
+        li {
+            width: 72px;
+            height: 72px;
+            border-radius: 10px;
+            float: left;
+            margin: 0 30px 20px 0;
+            border: 1px solid #fff;
+            -webkit-transition: ease-out 0.5s;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+            .user {
+                position: absolute;
+                width: 150px;
+                height: 50px;
+                bottom: -60px;
+                left: 0;
+                font-size: 20px;
+                text-align: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                background-color: #fff;
+                border-radius: 10px;
+                line-height: 50px;
+            }
+        }
+    }
+
+    ul::-webkit-scrollbar {
+        visibility: hidden;
+    }
+}
+
+#vote {
+    width: 1020px;
+    height: 620px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: -100px;
+    top: -30px;
+    //padding: 10px 15px;
+
+    .voteCon {
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+    .title {
+        height: 47px;
+        //background: url("../images/2_6.png") top center no-repeat;
+        background-size: 100% 100%;
+        padding: 0 10px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 47px;
+    }
+    .select {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0 10px;
+        color: #fff;
+        font-size: 20px;
+        .clearFix();
+
+        .select-box {
+            float: left;
+
+            width: 100px;
+            margin-left: 55px;
+        }
+    }
+    .selectName {
+        width: 100px;
+        //float: left;
+        padding-top: 15px;
+        //margin-left: 60px;
+        height: 41px;
+        text-align: center;
+        .ellipsis(2);
+    }
+    .selectNum {
+        position: relative;
+        width: 100px;
+        height: 410px;
+        //float: right;
+        margin-bottom: 20px;
+        border-bottom: 3px solid #ffc000;
+        padding: 18px 0;
+
+        .length {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            margin-left: -8px;
+            width: 20px;
+            background-color: #ffc000;
+            height: 0;
+            -webkit-transition: height ease-out 0.3s;
+            -moz-transition: height ease-out 0.3s;
+            -ms-transition: height ease-out 0.3s;
+            -o-transition: height ease-out 0.3s;
+            transition: height ease-out 0.3s;
+            span {
+                position: absolute;
+                width: 80px;
+                bottom: 101%;
+                right: -30px;
+                text-align: center;
+            }
+        }
+    }
+    #voteBtn {
+        height: 30px;
+        font-size: 18px;
+        position: absolute;
+        display: block;
+        padding: 0 15px;
+        border-radius: 15px;
+        color: #fff;
+        background-color: #fcab64;
+        line-height: 30px;
+        right: 15px;
+        bottom: -40px;
+    }
+    .stop {
+        background-color: rgb(100, 153, 255) !important;
+    }
+}
+
+#comment {
+    width: 700px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 15px;
+    top: 90px;
+    padding: 10px 15px;
+    overflow: hidden;
+
+    #commentCon {
+        position: relative;
+        width: 700px;
+        height: 410px;
+    }
+    .swiper-slide {
+        line-height: 30px;
+        padding: 5px 40px 5px 80px;
+        font-size: 20px;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 10px;
+        box-sizing: border-box;
+        position: relative;
+        .userImg {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 15px;
+        }
+        .userName {
+            width: 70px;
+            top: 55px;
+            left: 5px;
+            position: absolute;
+            font-size: 14px;
+            line-height: 20px;
+            word-break: break-all;
+            word-wrap: break-word;
+            text-align: center;
+            .ellipsis(2);
+        }
+    }
+    .li1 {
+        top: 10px;
+    }
+    .li2 {
+        top: 150px;
+    }
+    .li3 {
+        top: 290px;
+    }
+    .liMore {
+        height: auto !important;
+        z-index: 10 !important;
+        min-height: 130px;
+    }
+}
+
+.commentBtn {
+    position: absolute;
+    bottom: -25px;
+    right: 35px;
+    width: 135px;
+    .clearFix();
+
+    li {
+        margin-left: 10px;
+        cursor: pointer;
+        float: left;
+
+        img {
+            display: block;
+        }
+    }
+
+    #stop {
+        width: 35px;
+        height: 35px;
+        background: url("../images/2_9.png") center center no-repeat;
+    }
+
+    .stop {
+        background-image: url("../images/2_8.png") !important;
+    }
+}
+
+#lottery1, #lottery2 {
+    height: 100%;
+}
+
+#lottery {
+    width: 800px;
+    height: 410px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: -10px;
+    top: 115px;
+    padding: 10px 15px;
+    .lotteryCon {
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+    .title {
+        height: 47px;
+        //background: url("../images/2_6.png") top center no-repeat;
+        background-size: 100% 100%;
+        padding: 0 10px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 47px;
+    }
+    .lotteryArea {
+        width: 375px;
+        height: 155px;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        .mask1 {
+            width: 125px;
+            height: 155px;
+            position: absolute;
+            background-color: #000;
+            opacity: 0.5;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .mask3 {
+            border: 3px solid #eba261;
+            width: 125px;
+            height: 155px;
+            position: absolute;
+            top: -3px;
+            left: 122px;
+            z-index: 1;
+        }
+        .mask2 {
+            width: 125px;
+            height: 155px;
+            position: absolute;
+            background-color: #000;
+            opacity: 0.5;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+        #lotteryUser {
+            width: 375px;
+            height: 155px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            .lotUser {
+                position: absolute;
+                width: 125px;
+                height: 155px;
+                top: 0;
+                left: 375px;
+                img {
+                    display: block;
+                    width: 125px;
+                    height: 125px;
+                }
+                p {
+                    height: 30px;
+                    line-height: 30px;
+                    background-color: #000;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 16px;
+                    .ellipsisNormal();
+                }
+            }
+        }
+    }
+
+    #lotteryStart1, #lotteryStart2 {
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        background-color: #faa960;
+        position: absolute;
+        bottom: 50px;
+        left: 133px;
+    }
+    .stop {
+        background-color: rgb(94, 170, 250) !important;
+    }
+    .level {
+        position: absolute;
+        bottom: 55px;
+        left: 10px;
+        label {
+            font-size: 20px;
+            color: #fff;
+            font-weight: normal;
+        }
+        #level {
+            width: 150px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: none;
+            font: inherit;
+            font-size: 16px;
+        }
+    }
+    #lotteryStart2 {
+        bottom: 50px;
+        left: 247px;
+    }
+    .prizeWinner1 {
+        position: absolute;
+        width: 280px;
+        height: 330px;
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+        top: 47px;
+        right: 20px;
+        .winnerTitle {
+            height: 54px;
+            line-height: 54px;
+            font-size: 18px;
+            padding: 0 10px;
+            border-bottom: 1px solid #ddd;
+            .clearFix();
+        }
+    }
+    #prizeWinner1 {
+        height: 220px;
+        overflow-y: auto;
+        width: 280px;
+        position: absolute;
+        top: 102px;
+        right: 20px;
+        .userList {
+            height: 54px;
+            line-height: 54px;
+            padding: 0 10px 0 100px;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            .userListNum {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                text-align: center;
+                background-color: #999;
+                color: #fff;
+                border-radius: 8px;
+                font-size: 14px;
+                top: 15px;
+                left: 8px;
+            }
+            .userListImg {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                left: 40px;
+                top: 2px;
+            }
+            .userListName {
+                .ellipsisNormal();
+            }
+        }
+    }
+    #prizeWinner2 {
+        height: 220px;
+        overflow-y: auto;
+        width: 280px;
+        position: absolute;
+        top: 102px;
+        right: 20px;
+        .levelName {
+            font-size: 16px;
+            background-color: #ddd;
+            padding: 0 10px;
+            height: 30px;
+            line-height: 30px;
+            color: #f00;
+        }
+        .userList {
+            height: 54px;
+            line-height: 54px;
+            padding: 0 10px 0 100px;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            .userListNum {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                text-align: center;
+                background-color: #999;
+                color: #fff;
+                border-radius: 8px;
+                font-size: 14px;
+                top: 15px;
+                left: 8px;
+            }
+            .userListImg {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                left: 40px;
+                top: 2px;
+            }
+            .userListName {
+                .ellipsisNormal();
+            }
+        }
+    }
+    #lotteryAgain1, #lotteryAgain2 {
+        width: 110px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        background-color: #60cdfa;
+        position: absolute;
+        bottom: 43px;
+        right: 100px;
+    }
+    #lotteryAgain1:disabled {
+        background-color: #ccc;
+    }
+    #lotteryAgain2:disabled {
+        background-color: #ccc;
+    }
+}
+
+#showWinner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+    .con {
+        width: 800px;
+        height: 600px;
+        top: 50%;
+        left: 50%;
+        margin-top: -300px;
+        margin-left: -400px;
+        position: absolute;
+    }
+    .winnerUser {
+        width: 277px;
+        height: 277px;
+        border-radius: 50%;
+        position: absolute;
+        top: 159px;
+        left: 260px;
+    }
+    .winnerMask {
+        width: 800px;
+        height: 780px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -400px;
+        margin-top: -390px;
+    }
+}
+
+.photoMove {
+    animation: ani1 linear 0.4s;
+}
+
+.photoMove2 {
+    animation: ani2 ease 1.5s;
+    animation-timing-function: cubic-bezier(0.040, 0.500, 0.350, 0.935);
+}
+
+@keyframes ani1 {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-500px, 0, 0);
+    }
+}
+
+@keyframes ani2 {
+    0% {
+        transform: translate3d(625px, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}

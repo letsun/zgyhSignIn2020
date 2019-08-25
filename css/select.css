@@ -1,0 +1,143 @@
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  color: #333;
+  font: normal normal normal 14px/20px 'Microsoft YaHei', Arial, sans-serif;
+}
+img {
+  border: 0;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+button {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+table {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td {
+  padding: 0;
+}
+textarea {
+  resize: none;
+}
+body {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.clearFix:before,
+.clearFix:after {
+  content: " ";
+  display: table;
+}
+.clearFix:after {
+  clear: both;
+}
+.pullLeft {
+  float: left;
+}
+.pullRight {
+  float: right;
+}
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.ellipsisNormal {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bg {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.session {
+  width: 80%;
+  margin: 0 auto;
+}
+.session h3 {
+  line-height: 80px;
+  text-align: center;
+  height: 80px;
+  font-size: 14px;
+}
+.session .formRow {
+  padding-left: 60px;
+  position: relative;
+}
+.session .formRow label {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #0976ff;
+  font-size: 14px;
+  font-weight: normal;
+  color: #fff;
+  left: 0;
+}
+.session .formRow #session {
+  height: 30px;
+  border: 1px solid #0976ff;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+.session #submit {
+  height: 30px;
+  border: none;
+  text-align: center;
+  background-color: #0976ff;
+  margin-top: 20px;
+  line-height: 30px;
+  color: #fff;
+  width: 100%;
+  font: inherit;
+}

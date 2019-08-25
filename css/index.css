@@ -1,0 +1,743 @@
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  color: #333;
+  font: normal normal normal 14px/20px 'Microsoft YaHei', Arial, sans-serif;
+}
+img {
+  border: 0;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+button {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+table {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td {
+  padding: 0;
+}
+textarea {
+  resize: none;
+}
+body {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.clearFix:before,
+.clearFix:after {
+  content: " ";
+  display: table;
+}
+.clearFix:after {
+  clear: both;
+}
+.pullLeft {
+  float: left;
+}
+.pullRight {
+  float: right;
+}
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.ellipsisNormal {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html {
+  overflow: hidden;
+}
+#container {
+  position: absolute;
+  width: 1600px;
+  height: 835px;
+  top: 50%;
+  left: 50%;
+  margin-top: -417px;
+  margin-left: -800px;
+  background: url("../images/1_7.jpg") center center no-repeat;
+  background-size: 100% 100%;
+}
+#content {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -400px;
+}
+#content .header {
+  position: absolute;
+  height: 70px;
+  padding-top: 10px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+#content .header .code {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 10px;
+  left: 35px;
+}
+#content .header .logo {
+  height: 70px;
+  display: block;
+  margin: 0 auto;
+}
+#content .header #signNum {
+  height: 70px;
+  line-height: 70px;
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 35px;
+}
+#content .nav {
+  position: absolute;
+  left: 50px;
+  bottom: 30px;
+  z-index: 10;
+}
+#content .nav li {
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+#content .nav li img {
+  display: block;
+}
+#content .nav li span {
+  position: absolute;
+  width: 38px;
+  height: 24px;
+  background-color: #fff;
+  bottom: -30px;
+  left: 0;
+  display: none;
+  text-align: center;
+  line-height: 24px;
+}
+#content .nav li:hover span {
+  display: block;
+}
+#sign {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  top: 0;
+  left: 0;
+}
+#sign .signBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+#sign .photoShow {
+  width: 60px;
+  height: 60px;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 105px;
+  left: 200px;
+  z-index: 9;
+  -webkit-transition: ease-out 0.3s;
+  -moz-transition: ease-out 0.3s;
+  -ms-transition: ease-out 0.3s;
+  -o-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+#sign .name {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px 15px;
+  line-height: 30px;
+  position: absolute;
+  top: 110px;
+  left: 280px;
+  word-break: break-all;
+  word-wrap: break-word;
+  z-index: 9;
+}
+#vote {
+  width: 700px;
+  height: 410px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 35px;
+  top: 90px;
+  padding: 10px 15px;
+}
+#vote .voteCon {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+#vote .title {
+  height: 47px;
+  background: url("../images/2_6.png") top center no-repeat;
+  background-size: 100% 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 47px;
+}
+#vote .select {
+  position: relative;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 20px;
+}
+#vote .select:before,
+#vote .select:after {
+  content: " ";
+  display: table;
+}
+#vote .select:after {
+  clear: both;
+}
+#vote .selectName {
+  width: 270px;
+  float: left;
+  padding-top: 21px;
+  height: 41px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+#vote .selectNum {
+  width: 310px;
+  float: right;
+  margin-right: 70px;
+  border-left: 3px solid #ffc000;
+  padding: 21px 0;
+}
+#vote .selectNum .length {
+  position: relative;
+  height: 20px;
+  background-color: #ffc000;
+  width: 0;
+  -webkit-transition: width ease-out 0.3s;
+  -moz-transition: width ease-out 0.3s;
+  -ms-transition: width ease-out 0.3s;
+  -o-transition: width ease-out 0.3s;
+  transition: width ease-out 0.3s;
+}
+#vote .selectNum .length span {
+  position: absolute;
+  width: 70px;
+  right: -80px;
+}
+#vote #voteBtn {
+  height: 30px;
+  font-size: 18px;
+  position: absolute;
+  display: block;
+  padding: 0 15px;
+  border-radius: 15px;
+  color: #fff;
+  background-color: #fcab64;
+  line-height: 30px;
+  right: 15px;
+  bottom: -35px;
+}
+#vote .stop {
+  background-color: #6499ff !important;
+}
+#comment {
+  width: 700px;
+  height: 410px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 35px;
+  top: 90px;
+  padding: 10px 15px;
+  overflow: hidden;
+}
+#comment .li {
+  width: 700px;
+  height: 130px;
+  line-height: 30px;
+  padding: 5px 40px 5px 80px;
+  font-size: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  left: 15px;
+  box-sizing: border-box;
+  /*-webkit-transition: top, left ease-out 0.5s;
+        -moz-transition: top, left ease-out 0.5s;
+        -ms-transition: top, left ease-out 0.5s;
+        -o-transition: top, left ease-out 0.5s;*/
+  transition: ease-out 0.5s;
+}
+#comment .li .userImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+#comment .li .userName {
+  width: 70px;
+  top: 70px;
+  left: 5px;
+  position: absolute;
+  font-size: 16px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+#comment .li .showMore {
+  position: absolute;
+  right: 9px;
+  top: 54px;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  background: url("../images/2_7.png") center center no-repeat;
+}
+#comment .li .more {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+#comment .li1 {
+  top: 10px;
+}
+#comment .li2 {
+  top: 150px;
+}
+#comment .li3 {
+  top: 290px;
+}
+#comment .liMore {
+  height: auto !important;
+  z-index: 10 !important;
+  min-height: 130px;
+}
+.commentBtn {
+  position: absolute;
+  bottom: 33px;
+  right: 47px;
+  width: 135px;
+}
+.commentBtn:before,
+.commentBtn:after {
+  content: " ";
+  display: table;
+}
+.commentBtn:after {
+  clear: both;
+}
+.commentBtn li {
+  margin-left: 10px;
+  cursor: pointer;
+  float: left;
+}
+.commentBtn li img {
+  display: block;
+}
+.commentBtn #stop {
+  width: 35px;
+  height: 35px;
+  background: url("../images/2_9.png") center center no-repeat;
+}
+.commentBtn .stop {
+  background-image: url("../images/2_8.png") !important;
+}
+#lottery1,
+#lottery2 {
+  height: 100%;
+}
+#lottery {
+  width: 700px;
+  height: 410px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 35px;
+  top: 90px;
+  padding: 10px 15px;
+}
+#lottery .lotteryCon {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+#lottery .title {
+  height: 47px;
+  background: url("../images/2_6.png") top center no-repeat;
+  background-size: 100% 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 47px;
+}
+#lottery .lotteryArea {
+  width: 375px;
+  height: 155px;
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+#lottery .lotteryArea .mask1 {
+  width: 125px;
+  height: 155px;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#lottery .lotteryArea .mask3 {
+  border: 3px solid #eba261;
+  width: 125px;
+  height: 155px;
+  position: absolute;
+  top: -3px;
+  left: 122px;
+  z-index: 1;
+}
+#lottery .lotteryArea .mask2 {
+  width: 125px;
+  height: 155px;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.5;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+#lottery .lotteryArea #lotteryUser {
+  width: 375px;
+  height: 155px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+#lottery .lotteryArea #lotteryUser .lotUser {
+  position: absolute;
+  width: 125px;
+  height: 155px;
+  top: 0;
+  left: 375px;
+}
+#lottery .lotteryArea #lotteryUser .lotUser img {
+  display: block;
+  width: 125px;
+  height: 125px;
+}
+#lottery .lotteryArea #lotteryUser .lotUser p {
+  height: 30px;
+  line-height: 30px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#lottery #lotteryStart1,
+#lottery #lotteryStart2 {
+  width: 110px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  background-color: #faa960;
+  position: absolute;
+  bottom: 50px;
+  left: 133px;
+}
+#lottery .stop {
+  background-color: #5eaafa !important;
+}
+#lottery .level {
+  position: absolute;
+  bottom: 55px;
+  left: 10px;
+}
+#lottery .level label {
+  font-size: 20px;
+  color: #fff;
+  font-weight: normal;
+}
+#lottery .level #level {
+  width: 150px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  font: inherit;
+  font-size: 16px;
+}
+#lottery #lotteryStart2 {
+  bottom: 50px;
+  left: 247px;
+}
+#lottery .prizeWinner1 {
+  position: absolute;
+  width: 280px;
+  height: 330px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  top: 47px;
+  right: 20px;
+}
+#lottery .prizeWinner1 .winnerTitle {
+  height: 54px;
+  line-height: 54px;
+  font-size: 18px;
+  padding: 0 10px;
+  border-bottom: 1px solid #ddd;
+}
+#lottery .prizeWinner1 .winnerTitle:before,
+#lottery .prizeWinner1 .winnerTitle:after {
+  content: " ";
+  display: table;
+}
+#lottery .prizeWinner1 .winnerTitle:after {
+  clear: both;
+}
+#lottery #prizeWinner1 {
+  height: 220px;
+  overflow-y: auto;
+  width: 280px;
+  position: absolute;
+  top: 102px;
+  right: 20px;
+}
+#lottery #prizeWinner1 .userList {
+  height: 54px;
+  line-height: 54px;
+  padding: 0 10px 0 100px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+#lottery #prizeWinner1 .userList .userListNum {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background-color: #999;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  top: 15px;
+  left: 8px;
+}
+#lottery #prizeWinner1 .userList .userListImg {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 40px;
+  top: 2px;
+}
+#lottery #prizeWinner1 .userList .userListName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#lottery #prizeWinner2 {
+  height: 220px;
+  overflow-y: auto;
+  width: 280px;
+  position: absolute;
+  top: 102px;
+  right: 20px;
+}
+#lottery #prizeWinner2 .levelName {
+  font-size: 16px;
+  background-color: #ddd;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+  color: #f00;
+}
+#lottery #prizeWinner2 .userList {
+  height: 54px;
+  line-height: 54px;
+  padding: 0 10px 0 100px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+#lottery #prizeWinner2 .userList .userListNum {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background-color: #999;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  top: 15px;
+  left: 8px;
+}
+#lottery #prizeWinner2 .userList .userListImg {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 40px;
+  top: 2px;
+}
+#lottery #prizeWinner2 .userList .userListName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#lottery #lotteryAgain1,
+#lottery #lotteryAgain2 {
+  width: 110px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  background-color: #60cdfa;
+  position: absolute;
+  bottom: 43px;
+  right: 100px;
+}
+#lottery #lotteryAgain1:disabled {
+  background-color: #ccc;
+}
+#lottery #lotteryAgain2:disabled {
+  background-color: #ccc;
+}
+#showWinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+}
+#showWinner .con {
+  width: 800px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -400px;
+  position: absolute;
+}
+#showWinner .user {
+  width: 277px;
+  height: 277px;
+  border-radius: 50%;
+  position: absolute;
+  top: 159px;
+  left: 260px;
+}
+#showWinner .winnerMask {
+  width: 800px;
+  height: 780px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -390px;
+}
+.photoMove {
+  animation: ani1 linear 0.4s;
+}
+.photoMove2 {
+  animation: ani2 ease 1.5s;
+  animation-timing-function: cubic-bezier(0.04, 0.5, 0.35, 0.935);
+}
+@keyframes ani1 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-500px, 0, 0);
+  }
+}
+@keyframes ani2 {
+  0% {
+    transform: translate3d(625px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -1,0 +1,155 @@
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  color: #333;
+  font: normal normal normal 14px/20px 'Microsoft YaHei', Arial, sans-serif;
+}
+img {
+  border: 0;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+button {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+table {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td {
+  padding: 0;
+}
+textarea {
+  resize: none;
+}
+body {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.clearFix:before,
+.clearFix:after {
+  content: " ";
+  display: table;
+}
+.clearFix:after {
+  clear: both;
+}
+.pullLeft {
+  float: left;
+}
+.pullRight {
+  float: right;
+}
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.ellipsisNormal {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bg {
+  display: block;
+  width: 100%;
+}
+.signIn {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.signIn .signInBg {
+  display: block;
+  width: 100%;
+}
+.signIn .signCon {
+  position: absolute;
+  width: 49%;
+  top: 36%;
+  left: 30%;
+}
+.signIn .signCon .userImg {
+  width: 45%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.signIn .signCon .userImg img {
+  display: block;
+  width: 100%;
+}
+.signIn .signCon label {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  font-weight: normal;
+  margin-top: 10px;
+}
+.signIn .signCon #signIn {
+  display: block;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #fff;
+  font-size: 14px;
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+  background: none;
+}
+.signIn .signCon #submit {
+  width: 90px;
+  height: 34px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 0;
+  border: none;
+  background-color: #5AD3EB;
+  line-height: 34px;
+  border-radius: 5px;
+}
