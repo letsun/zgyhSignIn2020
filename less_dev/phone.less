@@ -261,7 +261,7 @@
 
         background: #fff;
 
-        border-radius: 9px;
+        border-radius: 10px;
 
         -webkit-transform: translateY(-50%);
 
@@ -292,6 +292,9 @@
         }
 
         .inputBox {
+            position: relative;
+
+            height: 30px;
             margin-top: 10px;
 
             input[type="text"] {
@@ -318,6 +321,11 @@
             }
 
             select {
+                position: absolute;
+                left: 13%;
+                top: 0;
+                z-index: 10;
+
                 display: block;
 
                 width: 74%;
@@ -330,12 +338,27 @@
                 border: 1px solid #ddd;
                 border-radius: 25px;
 
-                background: #fff;
+                background: transparent;
 
                 padding: 0 10px;
                 box-sizing: border-box;
 
                 outline: none;
+                -webkit-appearance: none;
+
+                option {
+                    background: #fff;
+                }
+            }
+
+            .icon {
+                position: absolute;
+                right: 15%;
+                top: 5px;
+                z-index: 5;
+
+                color: #666;
+                font-size: 22px;
             }
 
             .active {
@@ -363,6 +386,8 @@
     left: 0;
     top: 0;
     z-index: 99;
+
+    display: none;
 
     width: 100%;
     height: 100%;

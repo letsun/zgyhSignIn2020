@@ -6,6 +6,8 @@ var _tmp = true;
 var activityList2;
 var flag = 0;
 
+var isSub = window.localStorage.getItem('isSub');
+
 (function ($) {
     "use strict";
 
@@ -27,9 +29,10 @@ var flag = 0;
                 common.alert({content: "请选择场次"});
                 return;
             }
-
             $("#selectSign").hide();
-            $("#signCon").show();
+            if (isSub == '' || isSub == null) {
+                $('#questionnaire-win').show();
+            }
         });
 
 
@@ -71,15 +74,10 @@ var flag = 0;
 
                         $("#selectSign").show();
                     } else {
-                        //只有一个活动
-                        $("#signCon").show();
+
                         main.activityId = res.activityid;
 
                         activityList2 = eval('(' + res.activityList + ')');
-                        if(activityList2[0].voteopend == 1) {
-                            //获取投票题目
-                            main.getVote();
-                        }
 
                     }
 
@@ -221,9 +219,8 @@ var flag = 0;
                 candidate: name,
                 sex: gender,
                 idnumber: idNum,
-                education: education,
-                school: school,
-                specialty: profession,
+                school: school + ' && ' + education,
+                specialty: profession + ' && ' + option,
                 mobile: phone,
                 email: email,
                 content: advocacySchool,
@@ -240,6 +237,8 @@ var flag = 0;
                 if (data.status == "1") {
                     main.sign();
                 } else {
+                    $('#sign').hide();
+                    window.localStorage.setItem('isSub',1);
                     common.alert({
                         mask: true,
                         content: "您已经签到过",
@@ -270,27 +269,24 @@ var flag = 0;
             },
             success: function (data) {
                 if (data.status == "1") {
+                    $('#sign').hide();
+                    window.localStorage.setItem('isSub',1);
                     common.alert({
                         mask: true,
                         content: "签到成功",
                     });
-                }
-
-                else if (data.status == "-3") {
+                } else if (data.status == "-3") {
+                    $('#sign').hide();
                     common.alert({
                         mask: true,
                         content: "您已经签到过",
                     });
-                }
-
-                else if (data.status == "-1") {
+                } else if (data.status == "-1") {
                     common.alert({
                         mask: true,
                         content: "活动尚未开启，敬请期待",
                     });
-                }
-
-                else {
+                } else {
                     common.alert({
                         mask: true,
                         content: "签到失败",
@@ -342,5 +338,11 @@ $(function () {
     // 点击签到按钮
     $('#signBtn').on('click',function () {
         $('#sign').fadeIn();
+    });
+
+
+    // 选择场次
+    $('#session').change(function () {
+        localStorage.clear();
     })
 });
