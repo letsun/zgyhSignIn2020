@@ -153,18 +153,18 @@ body {
 }
 .bg-title {
   position: absolute;
-  top: 15%;
+  top: 11%;
   left: 5%;
   width: 90%;
 }
 .photo {
   position: absolute;
-  top: 30%;
+  top: 43%;
   left: 50%;
   width: 70px;
   height: 70px;
   margin-left: -35px;
-  border: 2px solid #f25c10;
+  border: 2px solid #a81e27;
   border-radius: 50%;
 }
 .person {
@@ -175,10 +175,10 @@ body {
 }
 #signBtn {
   position: absolute;
-  bottom: 15%;
-  left: 31%;
+  top: 63%;
+  left: 34%;
   display: block;
-  width: 38%;
+  width: 32%;
 }
 #signBtn img {
   display: block;
@@ -509,7 +509,7 @@ body {
   line-height: 20px;
 }
 .questionnaire-win .questionnaire-con .questionnaire-dec .select-box .select-item {
-  padding: 8px 0;
+  padding: 4px 0;
 }
 .questionnaire-win .questionnaire-con .questionnaire-dec .select-box .select-item:before,
 .questionnaire-win .questionnaire-con .questionnaire-dec .select-box .select-item:after {
@@ -543,5 +543,87 @@ body {
 }
 .questionnaire-win .questionnaire-con .submit-btn img {
   display: block;
+  width: 100%;
+}
+/*注意事项*/
+.tip-win {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.tip-win .tip-con {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 74%;
+  padding-bottom: 16px;
+  background: #fff;
+  border-radius: 9px;
+  -webkit-transform: translate(-50%, -50%);
+}
+.tip-win .tip-con .title {
+  position: relative;
+}
+.tip-win .tip-con .title .title-bg {
+  display: block;
+  width: 100%;
+}
+.tip-win .tip-con .title .title-text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  line-height: 18px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transform: translateY(-50%);
+}
+.tip-win .tip-con .tip-dec {
+  padding: 0 20px;
+}
+.tip-win .tip-con .tip-dec .dec-title {
+  padding: 16px 0 6px 0;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+}
+.tip-win .tip-con .tip-dec .dec-title p {
+  margin-bottom: 6px;
+}
+.tip-win .tip-con .btn-wra {
+  padding: 0 20px;
+  margin-top: 16px;
+}
+.tip-win .tip-con .btn-wra:before,
+.tip-win .tip-con .btn-wra:after {
+  content: " ";
+  display: table;
+}
+.tip-win .tip-con .btn-wra:after {
+  clear: both;
+}
+.tip-win .tip-con .btn-wra .cancel-btn {
+  float: left;
+  display: block;
+  width: 94px;
+}
+.tip-win .tip-con .btn-wra .cancel-btn img {
+  width: 100%;
+}
+.tip-win .tip-con .btn-wra .confirm-btn {
+  float: right;
+  display: block;
+  width: 94px;
+}
+.tip-win .tip-con .btn-wra .confirm-btn img {
   width: 100%;
 }

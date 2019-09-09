@@ -9,7 +9,7 @@ var common = {};
         getRound: baseUrl + "w/crossDomain/getAllActivity/",        //获取场次列表
         getVote: baseUrl + "w/crossDomain/govote/",                 //获取投票题目
         submitVote: baseUrl + "w/crossDomain/submitVote/",          //提交投票
-        submitMes: baseUrl + "w/crossDomain/submitData/",           //提交信息
+        submitMes: baseUrl + "w/crossDomain/submitDataChinabank/",           // 中国银行提交信息
         submitSpeak: baseUrl + "w/crossDomain/submitComment/",      //提交发言
         signUrl: baseUrl + "w/crossDomain/submitCheckin/",          //签到
         pcInit: baseUrl + "w/crossDomain/queryActivity/",           //pc页面初始化

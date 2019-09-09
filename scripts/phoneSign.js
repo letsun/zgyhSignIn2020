@@ -6,7 +6,18 @@ var _tmp = true;
 var activityList2;
 var flag = 0;
 
-var isSub = window.localStorage.getItem('isSub');
+var reg = /^1[0-9]{10}$/;
+var reg2 = /(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+var reg3 = /.*@.*/;
+var name = '';
+var gender = '';
+var idNum = '';
+var education = '';
+var school = '';
+var profession = '';
+var phone = '';
+var email = '';
+var advocacySchool = '';
 
 (function ($) {
     "use strict";
@@ -30,9 +41,7 @@ var isSub = window.localStorage.getItem('isSub');
                 return;
             }
             $("#selectSign").hide();
-            if (isSub == '' || isSub == null) {
-                $('#questionnaire-win').show();
-            }
+            $('#questionnaire-win').show();
         });
 
 
@@ -42,6 +51,57 @@ var isSub = window.localStorage.getItem('isSub');
 
         $(".submitSign").on("click", function() {
             main.submitMes();
+        });
+
+        // 取消提交签到信息
+        $('.cancel-btn').on('click',function () {
+            $('#sign').hide();
+            $('#tip-win').hide();
+            main.getRound();
+        });
+
+
+        // 确认提交签到信息
+        $('.confirm-btn').on('click',function () {
+            var url = common.cfg.submitMes + common.cfg.companyId;
+
+            $.ajax({
+                type: 'GET',
+                url: url,
+                dataType: 'jsonp',
+                data: {
+                    candidate: name,
+                    sex: gender,
+                    idnumber: idNum,
+                    hail: main.activityId,
+                    school: school + ' && ' + education,
+                    specialty: profession + ' && ' + option,
+                    mobile: phone,
+                    email: email,
+                    content: advocacySchool,
+                    ts: (new Date()).getTime()
+                },
+                jsonp: 'submitDataback',
+                error: function () {
+                    common.alert({
+                        mask: true,
+                        content: "提交失败：网络错误"
+                    });
+                },
+                success: function (data) {
+                    if (data.status == "1") {
+                        main.sign();
+                    } else {
+                        $('#sign').hide();
+                        $('#tip-win').hide();
+                        common.alert({
+                            mask: true,
+                            content: "您已经签到过",
+                        });
+                    }
+
+                }
+            });
         });
     };
 
@@ -74,7 +134,7 @@ var isSub = window.localStorage.getItem('isSub');
 
                         $("#selectSign").show();
                     } else {
-
+                        $('#questionnaire-win').show();
                         main.activityId = res.activityid;
 
                         activityList2 = eval('(' + res.activityList + ')');
@@ -100,18 +160,15 @@ var isSub = window.localStorage.getItem('isSub');
      * @func main.submitMes()
      */
     main.submitMes = function () {
-        var reg = /^1[0-9]{10}$/;
-        var reg2 = /(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
-        var reg3 = /.*@.*/;
-        var name = $('#name').val();
-        var gender = $('#gender').val();
-        var idNum = $('#idNum').val();
-        var education = $('#education option:selected').text();
-        var school = $('#school').val();
-        var profession = $('#profession').val();
-        var phone = $('#phone').val();
-        var email = $('#email').val();
-        var advocacySchool = $('#advocacySchool option:selected').text();
+        name = $('#name').val();
+        gender = $('#gender').val();
+        idNum = $('#idNum').val();
+        education = $('#education option:selected').text();
+        school = $('#school').val();
+        profession = $('#profession').val();
+        phone = $('#phone').val();
+        email = $('#email').val();
+        advocacySchool = $('#advocacySchool option:selected').text();
 
         if ($.trim(name) == "") {
             common.alert({
@@ -209,44 +266,7 @@ var isSub = window.localStorage.getItem('isSub');
             return;
         }
 
-        var url = common.cfg.submitMes + common.cfg.companyId;
-
-        $.ajax({
-            type: 'GET',
-            url: url,
-            dataType: 'jsonp',
-            data: {
-                candidate: name,
-                sex: gender,
-                idnumber: idNum,
-                school: school + ' && ' + education,
-                specialty: profession + ' && ' + option,
-                mobile: phone,
-                email: email,
-                content: advocacySchool,
-                ts: (new Date()).getTime()
-            },
-            jsonp: 'submitDataback',
-            error: function () {
-                common.alert({
-                    mask: true,
-                    content: "提交失败：网络错误"
-                });
-            },
-            success: function (data) {
-                if (data.status == "1") {
-                    main.sign();
-                } else {
-                    $('#sign').hide();
-                    window.localStorage.setItem('isSub',1);
-                    common.alert({
-                        mask: true,
-                        content: "您已经签到过",
-                    });
-                }
-
-            }
-        });
+        $('#tip-win').fadeIn();
     };
 
     /**
@@ -270,13 +290,14 @@ var isSub = window.localStorage.getItem('isSub');
             success: function (data) {
                 if (data.status == "1") {
                     $('#sign').hide();
-                    window.localStorage.setItem('isSub',1);
+                    $('#tip-win').hide();
                     common.alert({
                         mask: true,
                         content: "签到成功",
                     });
                 } else if (data.status == "-3") {
                     $('#sign').hide();
+                    $('#tip-win').hide();
                     common.alert({
                         mask: true,
                         content: "您已经签到过",

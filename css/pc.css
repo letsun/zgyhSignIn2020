@@ -144,12 +144,12 @@ html {
 #container {
   position: absolute;
   width: 1600px;
-  height: 900px;
+  height: 835px;
   top: 50%;
   left: 50%;
-  margin-top: -450px;
+  margin-top: -417.5px;
   margin-left: -800px;
-  background: url("../images/1_20.jpg") center center no-repeat;
+  background: url("../images/1_20.png") center center no-repeat;
   background-size: 100% 100%;
 }
 .logo {
@@ -208,13 +208,13 @@ html {
 }
 #content .nav {
   position: absolute;
-  left: -95px;
-  bottom: -35px;
+  left: 0;
+  bottom: -50px;
   z-index: 10;
 }
 #content .nav li {
   float: left;
-  margin-right: 10px;
+  margin-right: 24px;
   cursor: pointer;
   position: relative;
 }
@@ -281,9 +281,9 @@ html {
 .signType2 {
   position: absolute;
   width: 800px;
-  height: 500px;
+  height: 600px;
   background-color: rgba(0, 0, 0, 0.5);
-  top: 50px;
+  top: 0;
   left: 0;
 }
 .signType2 .signBg {
@@ -324,7 +324,7 @@ html {
 }
 .signType2 ul {
   margin: 34px 0 0 50px;
-  height: 376px;
+  height: 476px;
   overflow-y: scroll;
 }
 .signType2 ul:before,

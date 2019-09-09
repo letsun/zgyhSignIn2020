@@ -200,10 +200,10 @@
                         var list = eval('('+res.listfans+')');
 
                         for (var i = 0; i < list.length; i++) {
-                            user.push({name: list[i].nickname, photo: list[i].photourl});
+                            user.push({name: decodeURI(list[i].nickname), photo: list[i].photourl});
 
                             if(!lottery.firstInto){
-                                main.user.push({name: list[i].nickname, photo: list[i].photourl});
+                                main.user.push({name: decodeURI(list[i].nickname), photo: list[i].photourl});
                                 main.user.sort(function () {
                                     return 0.5 - Math.random()
                                 });

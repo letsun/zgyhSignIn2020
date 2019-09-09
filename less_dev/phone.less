@@ -18,7 +18,7 @@
 
 .bg-title {
     position: absolute;
-    top: 15%;
+    top: 11%;
     left: 5%;
 
     width: 90%;
@@ -26,14 +26,14 @@
 
 .photo {
     position: absolute;
-    top: 30%;
+    top: 43%;
     left: 50%;
 
     width: 70px;
     height: 70px;
     margin-left: -70/2px;
 
-    border: 2px solid #f25c10;
+    border: 2px solid #a81e27;
     border-radius: 50%;
 }
 
@@ -47,11 +47,11 @@
 
 #signBtn {
     position: absolute;
-    bottom: 15%;
-    left: 31%;
+    top: 63%;
+    left: 34%;
 
     display: block;
-    width: 38%;
+    width: 32%;
 
     img {
         display: block;
@@ -450,7 +450,7 @@
             .select-box {
 
                 .select-item {
-                    padding: 8px 0;
+                    padding: 4px 0;
 
                     .clearFix();
 
@@ -495,6 +495,111 @@
                 display: block;
 
                 width: 100%;
+            }
+        }
+    }
+}
+
+/*注意事项*/
+.tip-win {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,.7);
+
+    .tip-con {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+
+        width: 74%;
+        padding-bottom: 16px;
+
+        background: #fff;
+
+        border-radius: 9px;
+
+        -webkit-transform: translate(-50%,-50%);
+
+        .title {
+            position: relative;
+
+            .title-bg {
+                display: block;
+
+                width: 100%;
+            }
+
+            .title-text {
+                position: absolute;
+                left: 0;
+                top: 50%;
+
+                width: 100%;
+
+                text-align: center;
+                line-height: 18px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+
+                -webkit-transform: translateY(-50%);
+            }
+        }
+
+        .tip-dec {
+            padding: 0 20px;
+
+            .dec-title {
+                padding: 16px 0 6px 0;
+
+                color: #000;
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 20px;
+
+                p {
+                    margin-bottom: 6px;
+                }
+            }
+        }
+
+        .btn-wra {
+            padding: 0 20px;
+            margin-top: 16px;
+
+            .clearFix();
+
+            .cancel-btn {
+                float: left;
+
+                display: block;
+
+                width: 94px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .confirm-btn {
+                float: right;
+
+                display: block;
+
+                width: 94px;
+
+                img {
+                    width: 100%;
+                }
             }
         }
     }

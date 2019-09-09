@@ -91,7 +91,7 @@
 
         lottery.timer.lotteryTimer = setInterval(function () {
             $("#lotteryUser").append('<div id="lotUser' + id + '" class="lotUser photoMove"><img src="' + main.user[lottery.userIndex].photo + '">' +
-                '<p>' + main.user[lottery.userIndex].name + '</p></div>');
+                '<p>' + decodeURI(main.user[lottery.userIndex].name) + '</p></div>');
             lottery.userIndex++;
 
             if (lottery.userIndex >= main.user.length) {
@@ -124,7 +124,7 @@
 
         for (var j = 0; j < 6; j++) {
             html += '<div class="lotUser photoMove2" style="left:' + (-250 + 125 * j) + 'px"><img src="' + main.user[lottery.userIndex].photo + '">' +
-                '<p>' + main.user[lottery.userIndex].name + '</p></div>';
+                '<p>' + decodeURI(main.user[lottery.userIndex].name) + '</p></div>';
 
             if (j == 3) {
                 winnerIndex = lottery.userIndex;

@@ -14,10 +14,10 @@ var activityId = common.getUrlString("activityid");
     main.init = function () {
         main.pageInit();
 
-        comment.initComment();
+        /*comment.initComment();*/
 
         sign.getUser(5000);
-        comment.getComment(3000);
+        /*comment.getComment(3000);*/
 
         sign.signPhoto2();
 
@@ -29,7 +29,7 @@ var activityId = common.getUrlString("activityid");
          * 切换到签到页
          */
         $("#nav1").on("click", function () {
-            commentSwiper.stopAutoplay();//停止评论播放
+            /*commentSwiper.stopAutoplay();//停止评论播放*/
 
             sign.signPhoto2();
             $("#comment,.commentBtn,#vote,#lottery").hide();
@@ -52,7 +52,7 @@ var activityId = common.getUrlString("activityid");
          */
         $("#nav3").on("click", function () {
             clearInterval(sign.timer.signTimer);//停止签到
-            commentSwiper.stopAutoplay();//停止评论播放
+            /*commentSwiper.stopAutoplay();//停止评论播放*/
 
             $("#sign,#comment,#vote,.commentBtn").hide();
             $("#lottery").show();
@@ -82,9 +82,9 @@ var activityId = common.getUrlString("activityid");
             commentSwiper.startAutoplay();//播放评论
         });
 
-        vote.initEvent();
+        /*vote.initEvent();*/
         lottery.initEvent();
-        comment.initEvent();
+        /*comment.initEvent();*/
     };
 
     /**
@@ -107,7 +107,7 @@ var activityId = common.getUrlString("activityid");
             },
             success: function (res) {
                 if (res.status == "1") {
-                    main.initVote(res);
+                    /*main.initVote(res);*/
                     main.initLottery(res);
                 } else if (res.status = "-1") {
                     common.alert({content: "活动尚未开启，敬请期待", width: "240px"});
